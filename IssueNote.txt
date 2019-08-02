@@ -1,0 +1,27 @@
+1)Increase maximum file upload size in php.ini
+->upload_max_filesize
+->post_max_size
+
+2)verify permission of temp directory 
+->upload_tmp_dir
+
+3)migrate problem specified key too long
+->AppServiceProvider.php   
+use Illuminate\Support\Facades\Schema;
+public function boot()
+    {
+        //
+         Schema::defaultStringLength(191);
+    }
+
+if route only work with index.php 
+-> set apache allowoverride to all
+
+4)composer vendor not created
+->delete the composer.lock file and then run composer install.
+
+after doing this check whether there is the .env file. If not , just rename (or copy) the .env.example file and after doing so run the artisan command php artisan key:generate
+
+5)session not working in middleware
+->//moved startsession from web middlewaregroups in app/http/Kernel.php
+    \Illuminate\Session\Middleware\StartSession::class

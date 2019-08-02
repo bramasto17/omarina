@@ -1,0 +1,14 @@
+version 1
+
+unfinished:
+1)pagination ->transaction,menu,news setting
+2)email 
+3)design ->responsive mobile navbar
+		 ->large screen (lg) and tablet (sm)
+4)api error catch (500,404,dll) & transaction setting feedback
+5)Menu Setting issue -> kalau ubah nama item, folder utk picture belum sesuai
+
+important:
+1)url redirect tanpa public
+1)angular url redirect di ->OrderCtrl
+						  ->LoginCtrl 
